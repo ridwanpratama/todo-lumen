@@ -11,14 +11,14 @@ Laravel Lumen is a stunningly fast PHP micro-framework for building web applicat
 
 Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
 
-## Contributing
+## Setup
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Clone this project `https://github.com/ridwanz02/todo-lumen`
+2. Create `.env` file with command `cp .env.example .env`
+3. Edit database config
+4. Add `use Illuminate\Support\Str;` to your web.php file
+5. Add `$router->get('/key', function() {
+    return Str::random(32);
+   });`
+6. Run project using `php -S localhost:8000 -t public` command
+7. Open `localhost:8000/api/key`, copy and paste key to APP_KEY in .env 
